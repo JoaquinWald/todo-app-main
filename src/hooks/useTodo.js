@@ -9,6 +9,7 @@ import bgDesktopLight from '../images/bg-desktop-light.jpg';
 import bgMobileDark from '../images/bg-mobile-dark.jpg';
 import bgMobileLight from '../images/bg-mobile-light.jpg';
 
+
 export const useTodo = () => {
 
   const sensors = useSensors(
@@ -72,11 +73,28 @@ export const useTodo = () => {
   const dinamicClass = viewTodos.length >= 1 ? 'flex justify-center' : 'flex justify-center mt-10';
 
 
-  const [theme, setTheme] = useState('light');
+  // const { themeType } = useSelector(state => state.todos);
+  const themeType = useSelector(state => state.todos.themeType)
+  const [theme, setTheme] = useState(themeType);
 
   const onThemeSwitch = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   }
+
+  useEffect(() => {
+    let themeSaved = localStorage.getItem('theme');
+    if (themeSaved) {
+      setTheme(themeSaved === 'light' ? 'light' : 'dark');
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme])
+
+
+
 
   const bgImageDesktop = theme === 'light' ? bgDesktopLight : bgDesktopDark;
   const bgImageMobile = theme === 'light' ? bgMobileLight : bgMobileDark;
@@ -100,10 +118,11 @@ export const useTodo = () => {
     }
   }, [dispatch]);
 
-
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(viewTodos));
   }, [viewTodos]);
+
+
 
   return {
     sensors,

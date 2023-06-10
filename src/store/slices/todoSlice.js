@@ -6,14 +6,9 @@ export const todoSlice = createSlice({
     todos: [],
     todosActive: [],
     todosCompleted: [],
+    themeType: 'light',
 
     viewTodos: [],
-
-    // todos: [
-    // id: new Date().getTime() * 3,
-    // description: '',
-    // done: false,
-    // ]
 
   },
   reducers: {
@@ -69,6 +64,7 @@ export const {
   activeTodos,
   completeTodos,
   setNewOrder,
-  setLocalStorage
+  setLocalStorage,
+  themeType
 }
   = todoSlice.actions;

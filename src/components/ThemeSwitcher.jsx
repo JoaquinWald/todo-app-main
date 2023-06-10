@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import iconMoon from '../images/icon-moon.svg';
 import iconSun from '../images/icon-sun.svg';
+// import { themeType } from "../store/slices/todoSlice";
+import { useSelector } from "react-redux";
 
 export const ThemeSwitcher = () => {
 
-  const [theme, setTheme] = useState('dark');
+  const { themeType } = useSelector(state => state.todos)
+
+  const [theme, setTheme] = useState(themeType);
 
   useEffect(() => {
     window.matchMedia('prefer-color-scheme: dark').matches ? setTheme('dark') : setTheme('light');
