@@ -6,6 +6,9 @@ import { CSS } from "@dnd-kit/utilities";
 
 import { PropTypes } from "prop-types";
 
+import { iconCheckCloudinary } from "https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362879/todo-app-main-frontend-mentor/icon-check_ovbweu.svg";
+import { iconCrossCloudinary } from "https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362880/todo-app-main-frontend-mentor/icon-cross_yzhwb0.svg";
+
 
 export const ListItems = ({ description, id, done, theme }) => {
 
@@ -57,7 +60,9 @@ export const ListItems = ({ description, id, done, theme }) => {
       >
         <img
           className={`${iconCheck} p-1`}
-          src="../../images/icon-check.svg" alt="" />
+          // src="../../images/icon-check.svg" alt=""
+          src={iconCheckCloudinary}
+        />
       </span>
 
       <ul
@@ -74,7 +79,10 @@ export const ListItems = ({ description, id, done, theme }) => {
         className="absolute right-4 top-3.5 h-5 w-5 cursor-pointer"
         onClick={onDeleteTodo}
       >
-        <img className="" src="../../images/icon-cross.svg" alt="" />
+        <img className=""
+          // src="../../images/icon-cross.svg"
+          src={iconCrossCloudinary}
+          alt="" />
       </span>
 
     </article>
