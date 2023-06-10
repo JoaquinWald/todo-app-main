@@ -5,16 +5,16 @@ import { activeTodos, addTodo, allTodos, clearAllCompletedTodos, completeTodos, 
 import { useEffect, useState } from 'react';
 import { ThemeSwitcher } from './components/ThemeSwitcher';
 
-// import bgDesktopDark from '../images/bg-desktop-dark.jpg';
-// import bgDesktopLight from '../images/bg-desktop-light.jpg';
-// import bgMobileDark from '../images/bg-mobile-dark.jpg';
-// import bgMobileLight from '../images/bg-mobile-light.jpg';
+import bgDesktopDark from './images/bg-desktop-dark.jpg';
+import bgDesktopLight from './images/bg-desktop-light.jpg';
+import bgMobileDark from './images/bg-mobile-dark.jpg';
+import bgMobileLight from './images/bg-mobile-light.jpg';
 
 
-import bgDesktopDark from 'https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362879/todo-app-main-frontend-mentor/bg-desktop-dark_lyvjbc.jpg';
-import bgDesktopLight from 'https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362880/todo-app-main-frontend-mentor/bg-desktop-light_vevgcn.jpg';
-import bgMobileDark from 'https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362879/todo-app-main-frontend-mentor/bg-mobile-dark_wtlxse.jpg';
-import bgMobileLight from 'https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362879/todo-app-main-frontend-mentor/bg-mobile-light_b38gzx.jpg';
+// import bgDesktopDark from 'https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362879/todo-app-main-frontend-mentor/bg-desktop-dark_lyvjbc.jpg';
+// import bgDesktopLight from 'https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362880/todo-app-main-frontend-mentor/bg-desktop-light_vevgcn.jpg';
+// import bgMobileDark from 'https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362879/todo-app-main-frontend-mentor/bg-mobile-dark_wtlxse.jpg';
+// import bgMobileLight from 'https://res.cloudinary.com/dt0foxzt0/image/upload/v1686362879/todo-app-main-frontend-mentor/bg-mobile-light_b38gzx.jpg';
 
 
 import { DndContext, PointerSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
