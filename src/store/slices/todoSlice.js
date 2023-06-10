@@ -6,7 +6,6 @@ export const todoSlice = createSlice({
     todos: [],
     todosActive: [],
     todosCompleted: [],
-    todosLocalStorage: [],
 
     viewTodos: [],
 

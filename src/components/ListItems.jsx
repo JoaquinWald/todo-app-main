@@ -12,6 +12,12 @@ import iconCrossUbi from '../images/icon-cross.svg';
 
 export const ListItems = ({ description, id, done, theme }) => {
 
+  ListItems.propTypes = {
+    description: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    done: PropTypes.bool.isRequired,
+    theme: PropTypes.string.isRequired,
+  };
 
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: id });
 
@@ -39,12 +45,6 @@ export const ListItems = ({ description, id, done, theme }) => {
     transition
   }
 
-  ListItems.propTypes = {
-    description: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    done: PropTypes.bool.isRequired,
-    theme: PropTypes.string.isRequired,
-  };
 
   return (
     <article

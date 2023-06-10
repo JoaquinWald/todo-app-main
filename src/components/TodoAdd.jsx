@@ -1,6 +1,12 @@
 import { useForm } from "../hooks/useForm";
+import { PropTypes } from "prop-types";
+
 
 export const TodoAdd = ({ onNewTodo }) => {
+
+  TodoAdd.propTypes = {
+    onNewTodo: PropTypes.func.isRequired,
+  }
 
   const { description, onInputChange, onResetForm } = useForm({ description: '' });
 
