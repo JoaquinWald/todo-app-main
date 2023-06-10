@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  background-color: rgb(227, 227, 227);
+}
+
+.dark {
+  background: rgb(2, 6, 23);
+  /* color: #fff; */
+}
