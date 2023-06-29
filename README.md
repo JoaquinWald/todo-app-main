@@ -35,7 +35,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
 - Live Site URL: https://todo-app-main-joaquinwald.vercel.app/
 
 ## My process
